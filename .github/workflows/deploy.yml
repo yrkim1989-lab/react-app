@@ -35,7 +35,7 @@ jobs:
 
       - name: Sync files to S3
         run: |
-          aws s3 sync ./frontend/dist/ s3://${{ secrets.FRONTEND_BUCKET }}/ --delete --acl public-read
+          aws s3 sync ./frontend/dist/ s3://${{ secrets.FRONTEND_BUCKET }}/ --delete
 
       # - name: Deploy to S3
       #   uses: jakejarvis/s3-sync-action@v0.6.0
